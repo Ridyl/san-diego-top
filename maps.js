@@ -4,14 +4,6 @@ let buttons = document.querySelectorAll("#map-button");
 let click = 0;
 let lastCoords = [];
 
-// leafletjs icon creation
-let blueIcon = L.icon({
-    iconUrl: 'images/blue-pin.png',
-
-    iconSize:     [26, 40], // size of the icon
-    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
-
 buttons.forEach(button => {
     button.addEventListener("click", function(event) {
         // sets closer value to current click value to keep value of previous maps id = "#"
@@ -40,13 +32,7 @@ buttons.forEach(button => {
 
         // if the first button is pressed
         if (click == 1) {
-            let map = L.map('map').setView(coords, 15);
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-        
-            L.marker(coords, {icon: blueIcon}).addTo(map);
+            drawMap();
 
         // if the same button is pressed
         } else if (coords.toString() == lastCoords.toString()) {
@@ -62,13 +48,7 @@ buttons.forEach(button => {
                 lastCoords = [];
             // else redraw map of previously closed map
             } else {
-                let map = L.map('map').setView(coords, 15);
-                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 19,
-                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                }).addTo(map);
-            
-                L.marker(coords, {icon: blueIcon}).addTo(map); 
+                drawMap(); 
             }
         
         // if not first press and button is different than previous
@@ -82,8 +62,22 @@ buttons.forEach(button => {
                 }
                 old.remove();
             }
-        
+            
+            drawMap();
+        }
+
+        function drawMap() {
             let map = L.map('map').setView(coords, 15);
+            // leafletjs icon creation
+            let blueIcon = L.icon({
+                iconUrl: 'images/blue-pin.png',
+                iconSize:     [26, 40], 
+                popupAnchor:  [-3, -76]
+            });
+
+            // popup tooltip creation
+            blueIcon.bindPopup("TEST");
+
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
