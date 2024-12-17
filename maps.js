@@ -78,21 +78,7 @@ buttons.forEach(button => {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
-        
-            // creates marker and functions below handle hover events to show popup
-            let address = popupBuilder(coords);
-            let marker = L.marker(coords, {icon: blueIcon}).addTo(map).bindPopup(address); 
 
-            marker.on('mouseover', function() {
-                marker.openPopup();
-            });
-            
-            marker.on('mouseout', function() {
-                marker.closePopup();
-            });
-        }
-
-        function popupBuilder(coords) {
             fetch("address.json")
             .then(response => response.json())
             .then(json => {
@@ -102,14 +88,30 @@ buttons.forEach(button => {
                 for(let array in Object.keys(pop)) {
                     for(let key in pop[array]) {
                         if(key == "location") {
-                            // figure out what this needs to return to input text within popup
+                            // parse float for coords array where values are stored as strings to compare to json values
+                            // that are stored as floats
+                            let numOne = parseFloat(coords[0]);
+                            let numTwo = parseFloat(coords[1]);
+                            // compares json address to parsed floats
+                            if (pop[array][key][0] == numOne && pop[array][key][1] == numTwo) {
+                                let popOut =  `<strong>${pop[array].name}</strong> </br><i>${pop[array].address}</i>`;
+                                
+                                // creates marker and functions below handle hover events to show popup
+                                let marker = L.marker(coords, {icon: blueIcon}).addTo(map).bindPopup(popOut);
+
+                                marker.on('mouseover', function() {
+                                    marker.openPopup();
+                                });
+                                
+                                marker.on('mouseout', function() {
+                                    marker.closePopup();
+                                });
+                            }
                         }
                     }
-                }
-                
+                } 
+                lastCoords = coords;
             });
         }
-        // saves coords for closing
-        lastCoords = coords;
-    });
-});
+    }
+)})
