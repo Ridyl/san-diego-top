@@ -68,3 +68,7 @@ button:active {
 #map { 
     height: 400px; 
 }
+
+tr td:first-child {
+    font-weight: 600;
+}
