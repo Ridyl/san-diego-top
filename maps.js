@@ -62,7 +62,6 @@ buttons.forEach(button => {
                 }
                 old.remove();
             }
-            
             drawMap();
         }
 
@@ -72,18 +71,43 @@ buttons.forEach(button => {
             let blueIcon = L.icon({
                 iconUrl: 'images/blue-pin.png',
                 iconSize:     [26, 40], 
-                popupAnchor:  [-3, -76]
+                popupAnchor:  [0, -25]
             });
-
-            // popup tooltip creation
-            blueIcon.bindPopup("TEST");
-
+            
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
         
-            L.marker(coords, {icon: blueIcon}).addTo(map); 
+            // creates marker and functions below handle hover events to show popup
+            let address = popupBuilder(coords);
+            let marker = L.marker(coords, {icon: blueIcon}).addTo(map).bindPopup(address); 
+
+            marker.on('mouseover', function() {
+                marker.openPopup();
+            });
+            
+            marker.on('mouseout', function() {
+                marker.closePopup();
+            });
+        }
+
+        function popupBuilder(coords) {
+            fetch("address.json")
+            .then(response => response.json())
+            .then(json => {
+                // assigns data to json value.
+                const pop = json;
+                
+                for(let array in Object.keys(pop)) {
+                    for(let key in pop[array]) {
+                        if(key == "location") {
+                            // figure out what this needs to return to input text within popup
+                        }
+                    }
+                }
+                
+            });
         }
         // saves coords for closing
         lastCoords = coords;

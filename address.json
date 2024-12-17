@@ -1,0 +1,152 @@
+[
+    {
+        "name": "The San Diego Zoo Safari Park",
+        "location": [33.09745, -116.99572],
+        "address": "15500 San Pasqual Valley Rd, Escondido, CA 92027, USA"
+    },
+    {
+        "name": "Seaport Village",
+        "location": [32.70922, -117.17007],
+        "address": "849 W Harbor Dr, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Comic Con",
+        "location": [32.70648, -117.16614],
+        "address": "San Diego Convention Center, 111 W Harbor Dr, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Stone Brewery",
+        "location": [33.115875, -117.120022],
+        "address": "1999 Citracado Pkwy, Escondido, CA 92029, USA"
+    },
+    {
+        "name": "Café 21",
+        "location": [32.715382, -117.160545],
+        "address": "802 Fifth Ave, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Surfari",
+        "location": [32.783761, -117.252811],
+        "address": "2163 Abbott St, San Diego, CA 92107, USA"
+    },
+    {
+        "name": "Torrey Pines",
+        "location": [32.926988, -117.259269],
+        "address": "12600 N Torrey Pines Rd, La Jolla, CA 92037, USA"
+    },
+    {
+        "name": "Ghost Tour Through The Gaslamp",
+        "location": [32.712614, -117.160163],
+        "address": "410 Island Ave, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Birch Aquarium",
+        "location": [32.865938, -117.250414],
+        "address": "2300 Expedition Way, La Jolla, CA 92037, USA"
+    },
+    {
+        "name": "Museum Of Man",
+        "location": [32.731771, -117.152293],
+        "address": "1350 El Prado, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Adams Avenue Book Store",
+        "location": [32.763499, -117.117130],
+        "address": "3502 Adams Ave, San Diego, CA 92116, USA"
+    },
+    {
+        "name": "Crazee Burger",
+        "location": [32.750202, -117.129937],
+        "address": "3993 30th St, San Diego, CA 92104, USA"
+    },
+    {
+        "name": "Convoy Street",
+        "location": [32.824932, -117.155888],
+        "address": "Convoy St, San Diego, CA 92111, USA"
+    },
+    {
+        "name": "Natural Hot Springs At Agua Caliente",
+        "location": [32.951521, -116.305594],
+        "address": "39545 Great Southern Overland Stage Rte, Julian, CA 92036, USA"
+    },
+    {
+        "name": "Thrift Trader",
+        "location": [32.799316, -117.244245],
+        "address": "1644 Garnet Ave, San Diego, CA 92109, USA"
+    },
+    {
+        "name": "Fashion Valley",
+        "location": [32.767874, -117.166531],
+        "address": "7007 Friars Rd, San Diego, CA 92108, USA"
+    },
+    {
+        "name": "OB Farmers Market",
+        "location": [32.746271, -117.250631],
+        "address": "4900 Newport Ave, San Diego, CA 92107, USA"
+    },
+    {
+        "name": "House Of Scuba",
+        "location": [32.819280, -117.225294],
+        "address": "5141 Santa Fe St, San Diego, CA 92109, USA"
+    },
+    {
+        "name": "Rock The Casbah",
+        "location": [32.730278, -117.171850],
+        "address": "2501 Kettner Blvd, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Legoland",
+        "location": [33.128048, -117.311518],
+        "address": "1 Legoland Dr, Carlsbad, CA 92008, USA"
+    },
+    {
+        "name": "New Central Library",
+        "location": [32.709029, -117.154239],
+        "address": "330 Park Blvd, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "The Old Globe",
+        "location": [32.732280, -117.151504],
+        "address": "1363 Old Globe Way, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Spreckels Organ Pavilion",
+        "location": [32.729410, -117.150415],
+        "address": "2125 Pan American Rd E, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Ray’s",
+        "location": [32.782899, -117.252743],
+        "address": "1453 Sunset Cliffs Blvd, San Diego, CA 92107, USA"
+    },
+    {
+        "name": "South Bay Drive-In",
+        "location": [32.578109, -117.086512],
+        "address": "2170 Coronado Ave, San Diego, CA 92154, USA"
+    },
+    {
+        "name": "Ninja Night Race",
+        "location": [32.731115, -117.138240],
+        "address": "1550 Market St, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Black’s Beach",
+        "location": [32.887686, -117.252963],
+        "address": "2800 Torrey Pines Scenic Dr, La Jolla, CA 92037, USA"
+    },
+    {
+        "name": "Barrio Logan",
+        "location": [32.692975, -117.136492],
+        "address": "Barrio Logan, San Diego, CA 92113, USA"
+    },
+    {
+        "name": "Extraordinary Desserts",
+        "location": [32.720263, -117.165970],
+        "address": "1430 Union St, San Diego, CA 92101, USA"
+    },
+    {
+        "name": "Hash House A Go Go",
+        "location": [32.743886, -117.160621],
+        "address": "3628 5th Ave, San Diego, CA 92103, USA"
+    }
+]
